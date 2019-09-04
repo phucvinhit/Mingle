@@ -1,0 +1,37 @@
+[
+ {
+ "name": "Berlin",
+ "cityCode": "2950158",
+ "background": "background_Berlin"
+ },
+ {
+ "name": "Helsinki",
+ "cityCode": "658226",
+ "background": "background_Helsinki"
+ },
+ {
+ "name": "Ho Chi Minh",
+ "cityCode": "1566083",
+ "background": "background_HCM"
+ },
+ {
+ "name": "London",
+ "cityCode": "2643743",
+ "background": "backgound_Lodon"
+ },
+ {
+ "name": "Rio",
+ "cityCode": "3451189",
+ "background": "background_Rio"
+ },
+ {
+ "name": "Stockholm",
+ "cityCode": "2673730",
+ "background": "background_Stockholm"
+ },
+ {
+ "name": "Tokyo",
+ "cityCode": "1850147",
+ "background": "backgound_Tokyo"
+ }
+ ]
