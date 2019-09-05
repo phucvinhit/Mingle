@@ -27,7 +27,6 @@
 		3DA739D3231E350B004647B1 /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DA739D1231E350B004647B1 /* WeatherCell.xib */; };
 		3DA739D5231E4523004647B1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA739D4231E4523004647B1 /* Extension.swift */; };
 		3DA739D7231E8069004647B1 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA739D6231E8069004647B1 /* HeaderView.swift */; };
-		3DA739D9231E807F004647B1 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DA739D8231E807F004647B1 /* HeaderView.xib */; };
 		3DA739DB231E9698004647B1 /* FroceCastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA739DA231E9698004647B1 /* FroceCastController.swift */; };
 		3DA739DD231E99D2004647B1 /* ForeCastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA739DC231E99D2004647B1 /* ForeCastViewModel.swift */; };
 		3DA739DF231EA92A004647B1 /* WeatherPageViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA739DE231EA92A004647B1 /* WeatherPageViewCotroller.swift */; };
@@ -82,7 +81,6 @@
 		3DA739D1231E350B004647B1 /* WeatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
 		3DA739D4231E4523004647B1 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		3DA739D6231E8069004647B1 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		3DA739D8231E807F004647B1 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		3DA739DA231E9698004647B1 /* FroceCastController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FroceCastController.swift; sourceTree = "<group>"; };
 		3DA739DC231E99D2004647B1 /* ForeCastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCastViewModel.swift; sourceTree = "<group>"; };
 		3DA739DE231EA92A004647B1 /* WeatherPageViewCotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPageViewCotroller.swift; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 				3DA739D0231E350B004647B1 /* WeatherCell.swift */,
 				3DA739D1231E350B004647B1 /* WeatherCell.xib */,
 				3DA739D6231E8069004647B1 /* HeaderView.swift */,
-				3DA739D8231E807F004647B1 /* HeaderView.xib */,
 				3DA739EF23200E24004647B1 /* ImageLoader.swift */,
 				3DA739F62320EBD6004647B1 /* ChaninedAnimatiionQueue.swift */,
 			);
@@ -349,7 +346,6 @@
 				3D33D4BE231B974D00B4E0C9 /* Assets.xcassets in Resources */,
 				3D33D4BC231B974B00B4E0C9 /* Main.storyboard in Resources */,
 				3D33D4E9231BE2E500B4E0C9 /* ForceCastView.xib in Resources */,
-				3DA739D9231E807F004647B1 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

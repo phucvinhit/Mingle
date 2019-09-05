@@ -20,7 +20,6 @@ class ForceCastView: UIView {
     var animationsQueue = ChainedAnimationsQueue()
 
     var forceCastDataSource: [List] = []
-//    var imageDataSource: [List] = []
     
     override func awakeFromNib() {
         tableWeather.register(UINib(nibName: "WeatherCell", bundle: .main), forCellReuseIdentifier: ForceCastView.cellIdentifier)

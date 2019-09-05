@@ -3,7 +3,7 @@
 //  WeatherUITests
 //
 //  Created by Vinh Pham on 9/1/19.
-//  Copyright © 2019 MTechDigital. All rights reserved.
+//  Copyright © 2019 Vinh Pham. All rights reserved.
 //
 
 import XCTest
@@ -30,5 +30,18 @@ class WeatherUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
+    
+    func testUIFlowAfterPressedAddPlusCities() {
+        
+        let app = XCUIApplication()
+        app.buttons["ic plus city"].tap()
+        
+        let tableView = app.tables
+        XCTAssertEqual(tableView.count, 1)
+        XCTAssert(tableView.cells.count == 7)
+        
+        XCUIDevice.shared.orientation = .portrait
+        XCUIApplication().buttons["ic plus city"].tap()
+        
+    }
 }

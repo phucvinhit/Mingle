@@ -85,6 +85,11 @@ extension CitiesControllerViewController: UITableViewDataSource, UITableViewDele
             cell.accessoryType = .none
         }
         
+        let layer = CAShapeLayer()
+        layer.path = UIBezierPath(roundedRect: CGRect(x: 15, y: cell.contentView.bounds.height + 1, width: cell.contentView.bounds.width - 15, height: 1), cornerRadius: 0 ).cgPath
+        layer.fillColor = #colorLiteral(red: 0.9254901961, green: 0.9254901961, blue: 0.9254901961, alpha: 1)
+        cell.contentView.layer.addSublayer(layer)
+        
         return cell
     }
     
@@ -103,5 +108,9 @@ extension CitiesControllerViewController: UITableViewDataSource, UITableViewDele
         }
         
         tableView.reloadRows(at: [indexPath], with: .none)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 54
     }
 }
