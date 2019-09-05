@@ -3,7 +3,7 @@
 //  Weather
 //
 //  Created by Vinh Pham on 9/3/19.
-//  Copyright © 2019 MTechDigital. All rights reserved.
+//  Copyright © 2019 Vinh Pham. All rights reserved.
 //
 
 import Foundation
@@ -14,7 +14,7 @@ class WeatherService {
     var weather: OpenWeather!
     var errorMessage = ""
     
-    var defaultSession: URLSession = {
+    var defaultSession: DHURLSession = {
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForResource = 300
         if #available(iOS 11, *) {

@@ -3,7 +3,7 @@
 //  Weather
 //
 //  Created by Vinh Pham on 9/3/19.
-//  Copyright © 2019 MTechDigital. All rights reserved.
+//  Copyright © 2019 Vinh Pham. All rights reserved.
 //
 
 import UIKit
@@ -13,13 +13,8 @@ class WeatherCell: UITableViewCell {
     @IBOutlet weak var imageViewWeatherDescription: ImageLoader!
     @IBOutlet weak var labelMaxTemperature: UILabel!
     @IBOutlet weak var labelMinTemperature: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
     public func loadData(weather: List) {
-        
         guard let weatherInList = weather.weather.first else {
             return
         }

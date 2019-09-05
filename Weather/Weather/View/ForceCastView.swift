@@ -3,7 +3,7 @@
 //  Weather
 //
 //  Created by Vinh Pham on 9/2/19.
-//  Copyright © 2019 MTechDigital. All rights reserved.
+//  Copyright © 2019 Vinh Pham. All rights reserved.
 //
 
 import UIKit
@@ -17,7 +17,8 @@ class ForceCastView: UIView {
     @IBOutlet weak var labelTemperatureDay: UILabel!
     @IBOutlet weak var labelMaxTemperature: UILabel!
     @IBOutlet weak var labelMinTemperature: UILabel!
-    
+    var animationsQueue = ChainedAnimationsQueue()
+
     var forceCastDataSource: [List] = []
 //    var imageDataSource: [List] = []
     
@@ -60,17 +61,11 @@ class ForceCastView: UIView {
         labelMaxTemperature.text = String(weather.temp.max)
         labelMinTemperature.text = String(weather.temp.min)
         imageViewWeatherDescription.loadImageWithUrl(weatherInList.iconUrl)
-        
     }
-    
 }
 
-extension ForceCastView: UITableViewDataSource {
+extension ForceCastView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        
-        
-        
         return forceCastDataSource.count > 0 ? forceCastDataSource.count - 1 : 0
     }
     
@@ -85,6 +80,13 @@ extension ForceCastView: UITableViewDataSource {
         
         return cell
     }
-    
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0.0
+        animationsQueue.queue(withDuration: 0.5, initializations: {
+            cell.layer.transform = CATransform3DTranslate(CATransform3DIdentity, cell.frame.size.width, 0, 0)
+        }, animations: {
+            cell.alpha = 1.0
+            cell.layer.transform = CATransform3DIdentity
+        })
+    }
 }

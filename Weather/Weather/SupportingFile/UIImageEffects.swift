@@ -3,7 +3,7 @@
 //  Weather
 //
 //  Created by Vinh Pham on 9/2/19.
-//  Copyright © 2019 MTechDigital. All rights reserved.
+//  Copyright © 2019 Vinh Pham. All rights reserved.
 //
 
 // Authorize: https://github.com/globchastyy/SwiftUIImageEffects

@@ -41,19 +41,6 @@ class WeatherPageViewCotroller: UIPageViewController {
             }
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-
 }
 
 extension WeatherPageViewCotroller: UIPageViewControllerDataSource {
@@ -96,7 +83,14 @@ extension WeatherPageViewCotroller: CitiesSelectedDelegate {
         controller?.dismiss(animated: true, completion: nil)
     }
     private func setupFroceCastUI(cities: [CityModel]) {
+        
+        // Need improvement: Coz currently when recieved selected list city. Reset list and currently index
+        
         listController.removeAll()
+        if currentIndex > cities.count - 1 {
+            currentIndex = 0
+        }
+        
         for (index, city) in cities.enumerated() {            
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "FroceCastController") as! FroceCastController
             vc.index = index
@@ -121,15 +115,8 @@ extension WeatherPageViewCotroller: UIScrollViewDelegate {
             return;
         }
         
-//        if (_currentIndex != 0) {
-//            // do the previous scroll
-//            [((BTGlassScrollViewController*)(((UINavigationController *)_viewControllerArray[_currentIndex - 1]).viewControllers)[0]).glassScrollView scrollHorizontalRatio:-ratio-1];
-//        }
-//
-//        if (_currentIndex != (_viewControllerArray.count - 1)) {
-//            // do the next scroll
-//            [((BTGlassScrollViewController*)(((UINavigationController *)_viewControllerArray[_currentIndex + 1]).viewControllers)[0]).glassScrollView scrollHorizontalRatio:-ratio+1];
-//        }
+        let vc  = listController[currentIndex] as FroceCastController
+        vc.weatherScrollView.scrollHorizontalRatio(-ratio)
         
         if currentIndex != 0 {
             let vc  = listController[currentIndex - 1] as FroceCastController

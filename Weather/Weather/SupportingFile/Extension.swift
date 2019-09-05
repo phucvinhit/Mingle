@@ -3,7 +3,7 @@
 //  Weather
 //
 //  Created by Vinh Pham on 9/3/19.
-//  Copyright © 2019 MTechDigital. All rights reserved.
+//  Copyright © 2019 Vinh Pham. All rights reserved.
 //
 
 import Foundation

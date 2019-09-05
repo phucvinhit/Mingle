@@ -3,7 +3,7 @@
 //  Weather
 //
 //  Created by Vinh Pham on 9/3/19.
-//  Copyright © 2019 MTechDigital. All rights reserved.
+//  Copyright © 2019 Vinh Pham. All rights reserved.
 //
 
 import UIKit
@@ -29,11 +29,8 @@ class FroceCastController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         let frocecastView: ForceCastView = UIView.fromNib()
-        
         let backgroundImage = viewModel.backgroundImage
         weatherScrollView = WeatherScrollView(frame: view.frame, backgroundImage: UIImage(named: backgroundImage) ?? UIImage(), foregroundView: frocecastView)
         
@@ -46,24 +43,6 @@ class FroceCastController: UIViewController {
         
         viewModel.didFinishFetch = {
             self.weatherScrollView.loadWeather(listWeather: self.viewModel.dataSource ?? [])
-//            self.viewModel.didFinishDownloadImage(image: <#T##UIImage?#>, index: <#T##Int#>, completion: <#T##ForeCastViewModel.ImageResult##ForeCastViewModel.ImageResult##(UIImage?, Int) -> ()#>)
-//            viewModel.Ima
-            self.viewModel.fetchImage()
-        }
-    
-//        viewModel.didFinishFetchImage.
-//       viewModel.didFinishFetchImage?(idne)
-//        viewModel.didFinishFetchImage.
-        
-        
-        
-        viewModel.didFinishImage = {
-            let image = self.viewModel.image
-            
-            DispatchQueue.main.async {
-                self.weatherScrollView.foregroundView.loadImagewithIndex(imageAtIndex: image)
-            }
-            
         }
     }
     @IBAction func buttonAddCitiesPressed(_ sender: Any) {
