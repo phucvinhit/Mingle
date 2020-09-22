@@ -1,5 +1,5 @@
-# Mingle
-Create an assignment like Yahoo Weather 
+
+Create an simple application like Yahoo Weather 
 
 
 Release notes
